@@ -51,11 +51,11 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
 
       <div className="input-container">
         <label htmlFor="email"><i className="fa-solid fa-envelope"></i></label>
-        <input {...register('email')} placeholder="email" type="email" id="email" />
+        <input className="padding" {...register('email')} placeholder="email" type="email" id="email" />
       </div>
       <div className="input-container">
         <label htmlFor="password"><i className="fa-solid fa-lock"></i></label>
-        <input {...register('password')} placeholder="password" type="password" id="password" />
+        <input className="padding" {...register('password')} placeholder="password" type="password" id="password" />
       </div>
       <div className="input-container">
         <label htmlFor="birthday"><i className="fa-solid fa-cake-candles"></i></label>
