@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: rgb(17, 37, 53);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.users-form {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 45%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: rgb(221, 228, 233);
+  text-align: left;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  padding-right: 40px;
+}
+
+
+button {
+  width: 70%;
+  background-color: rgb(167, 42, 184);
+  color: aliceblue;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.user-container {
+  display: flex;
+  position: relative;
+  background-color: aliceblue;
+  box-sizing: border-box;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 45px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.buttons {
+  display: flex;
+}
+
+.delete-btn {
+  color: red;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.edit-btn {
+  margin: 10px;
+  cursor: pointer;
+  color: black;
+  font-size: 18px;
+  background: transparent;
+}
+
+.newUser-btn {
+  background: transparent;
+  font-size: 30px;
+  position: fixed;
+  right: -30%;
+  bottom: 20px;
+}
