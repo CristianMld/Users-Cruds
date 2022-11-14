@@ -40,6 +40,8 @@ function App() {
 
   const deselectUser = () => setUserSelected(null);
 
+  const handleVisibility = () => setIsVisible(!isVisible);
+
   // console.log(usersList);
   return (
   
@@ -49,7 +51,8 @@ function App() {
         <UsersForm 
         getUsers={getUsers}
         userSelected={userSelected}
-        deselectUser={deselectUser}/>
+        deselectUser={deselectUser}
+        handleVisibility={handleVisibility}/>
         </>
       }
       
@@ -58,7 +61,9 @@ function App() {
       selectUser={selectUser}
       deleteUser={deleteUser}/>
       <button className='newUser-btn'
-      onClick={() => setIsVisible(!isVisible)}><i className="fa-solid fa-user-plus"></i></button>
+      onClick={handleVisibility}>
+       {isVisible ? <i className="fa-solid fa-user-slash"></i> :
+       <i className="fa-solid fa-user-plus"></i>}</button>
     </div>
   )
 }

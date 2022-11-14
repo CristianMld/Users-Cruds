@@ -45,7 +45,7 @@ input {
 
 button {
   width: 70%;
-  background-color: rgb(167, 42, 184);
+  background-color: rgb(115, 42, 184);
   color: aliceblue;
   border: none;
   border-radius: 10px;
@@ -54,6 +54,7 @@ button {
   box-sizing: border-box;
   font-size: 16px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .user-container {
@@ -104,6 +105,17 @@ button {
   cursor: pointer;
 }
 
+.cancel-btn {
+  background-color: rgb(36, 30, 61);
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2px;
+  right: 20px;cursor: pointer;
+}
+
 @media (max-width: 900px) {
   .users-form {
     width: 80%;
@@ -141,5 +153,9 @@ button {
 
   h3 {
     font-size: 16px;
+  }
+
+  .birthday-input {
+    padding-right: 20px;
   }
 }
