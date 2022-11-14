@@ -101,6 +101,7 @@ button {
   position: fixed;
   right: -30%;
   bottom: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {
