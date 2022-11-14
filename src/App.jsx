@@ -24,18 +24,14 @@ function App() {
   const deleteUser = (user) => {
     Swal.fire({
       title: 'Do you want to delete this user?',
-      showDenyButton: true,
       showCancelButton: true,
       confirmButtonText: 'Yes',
-      denyButtonText: `Don't delete`,
     }).then((result) => {
       if (result.isConfirmed) {
         axios.delete(`https://users-crud1.herokuapp.com/users/${user.id}/`)
           .then(() => getUsers())
           .catch(error => console.log(error.response?.data))
           Swal.fire('Deleted!', '', 'success')
-      } else if (result.isDenied) {
-        Swal.fire('Cancelled', '', 'info')
       }
     });
   }
@@ -53,9 +49,7 @@ function App() {
         <UsersForm 
         getUsers={getUsers}
         userSelected={userSelected}
-        deselectUser={deselectUser}
-        isVisible={isVisible}
-        setIsVisible={setIsVisible}/>
+        deselectUser={deselectUser}/>
         </>
       }
       

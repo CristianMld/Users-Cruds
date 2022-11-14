@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
-const UsersForm = ({ getUsers, userSelected, deselectUser, isVisible, setIsVisible }) => {
+const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
 
   const { handleSubmit, register, reset } = useForm();
 
@@ -27,6 +27,11 @@ const UsersForm = ({ getUsers, userSelected, deselectUser, isVisible, setIsVisib
       axios.put(`https://users-crud1.herokuapp.com/users/${userSelected.id}/`, data)
         .then(() => {
           getUsers()
+          Swal.fire({
+            title: 'Success',
+            text: 'User has been edited!',
+            icon: 'success'
+          })
           deselectUser();
         })
         .catch(error => console.log(error.response?.data));
@@ -36,11 +41,10 @@ const UsersForm = ({ getUsers, userSelected, deselectUser, isVisible, setIsVisib
           getUsers()
           Swal.fire({
             title: 'Success',
-            text: 'User has been added!',
+            text: 'A new user has been added!',
             icon: 'success'
           })
-          reset(userSelected)
-          setIsVisible(!isVisible);
+          reset(userSelected);
         })
         .catch(error => console.log(error.response?.data));
     }
