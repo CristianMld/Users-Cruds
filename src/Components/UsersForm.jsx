@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
-const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
+const UsersForm = ({ getUsers, userSelected, deselectUser, isVisible, setIsVisible }) => {
 
   const { handleSubmit, register, reset } = useForm();
 
@@ -39,7 +39,8 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
             text: 'User has been added!',
             icon: 'success'
           })
-          reset(userSelected);
+          reset(userSelected)
+          setIsVisible(!isVisible);
         })
         .catch(error => console.log(error.response?.data));
     }

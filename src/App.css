@@ -97,7 +97,7 @@ button {
 
 .newUser-btn {
   background: transparent;
-  font-size: 30px;
+  font-size: 40px;
   position: fixed;
   right: -30%;
   bottom: 20px;
@@ -107,29 +107,38 @@ button {
   .users-form {
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 50px;
     top: 20px;
     right: 0;
     position: relative;
   }
 
   .user-container {
-    width: 80%;
+    width: 90%;
     position: relative;
-    flex-direction: column;
-    padding: 2px 2px;
+    padding: 5px 10px;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 30px;
   }
 
   .newUser-btn {
     position: relative;
-    font-size: 20px;
+    font-size: 35px;
     bottom: 10px;
     left: 16%;
-    margin-top: 40px;
+    margin-top: 20px;
+  }
+
+  .delete-btn {
+    margin: 2px;
+    font-size: 16px;
+  }
+
+  .edit-btn {
+    font-size: 16px;
   }
 
   h3 {
-    font-size: 15px;
+    font-size: 16px;
   }
 }

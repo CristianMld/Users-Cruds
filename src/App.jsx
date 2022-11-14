@@ -53,7 +53,9 @@ function App() {
         <UsersForm 
         getUsers={getUsers}
         userSelected={userSelected}
-        deselectUser={deselectUser}/>
+        deselectUser={deselectUser}
+        isVisible={isVisible}
+        setIsVisible={setIsVisible}/>
         </>
       }
       
