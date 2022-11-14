@@ -36,7 +36,10 @@ function App() {
     });
   }
 
-  const selectUser = (user) => setUserSelected(user);
+  const selectUser = (user) => {
+    setIsVisible(true);
+    setUserSelected(user);
+  }
 
   const deselectUser = () => setUserSelected(null);
 
