@@ -41,7 +41,6 @@ function App() {
   const deselectUser = () => setUserSelected(null);
 
   const handleVisibility = () => setIsVisible(!isVisible);
-
   // console.log(usersList);
   return (
   

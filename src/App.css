@@ -106,7 +106,7 @@ button {
 }
 
 .cancel-btn {
-  background-color: rgb(36, 30, 61);
+  background-color: rgb(79, 78, 82);
   cursor: pointer;
 }
 
@@ -114,6 +114,10 @@ button {
   position: absolute;
   top: 2px;
   right: 20px;cursor: pointer;
+}
+
+.password-label {
+  cursor: pointer;
 }
 
 @media (max-width: 900px) {

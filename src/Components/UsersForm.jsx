@@ -6,6 +6,9 @@ import Swal from "sweetalert2";
 const UsersForm = ({ getUsers, userSelected, deselectUser, handleVisibility }) => {
 
   const { handleSubmit, register, reset } = useForm();
+  const [ isLockOpen, setIsLockOpen ] = useState(true);
+
+  const handleLock = () => setIsLockOpen(!isLockOpen);
 
   useEffect(() => {
     if(userSelected) {
@@ -52,7 +55,8 @@ const UsersForm = ({ getUsers, userSelected, deselectUser, handleVisibility }) =
 
   return (
     <form className="users-form" onSubmit={handleSubmit(submit)}>
-      <h3 className="close-btn" onClick={handleVisibility}><i className="fa-solid fa-circle-xmark"></i></h3>
+      <h3 className="close-btn" onClick={handleVisibility}>
+        <i className="fa-solid fa-circle-xmark"></i></h3>
       <h2>New user</h2>
       <div className="input-container">
         <label htmlFor="first_name"><i className="fa-solid fa-user"></i></label>
@@ -69,9 +73,11 @@ const UsersForm = ({ getUsers, userSelected, deselectUser, handleVisibility }) =
         type="email" id="email" required/>
       </div>
       <div className="input-container">
-        <label htmlFor="password"><i className="fa-solid fa-lock"></i></label>
+        <label className="password-label" onClick={handleLock} htmlFor="password">
+         {isLockOpen ? <i className="fa-solid fa-eye"></i>  :
+         <i className="fa-solid fa-eye-slash"></i>}</label>
         <input className="padding" {...register('password')} placeholder="password" 
-        type="password" id="password" required/>
+        type={isLockOpen ? 'password' : 'text'} id="password" required/>
       </div>
       <div className="input-container">
         <label htmlFor="birthday"><i className="fa-solid fa-cake-candles"></i></label>
