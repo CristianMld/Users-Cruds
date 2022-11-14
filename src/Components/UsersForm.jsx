@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
 
@@ -33,6 +34,11 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
       axios.post('https://users-crud1.herokuapp.com/users/', data)
         .then(() => {
           getUsers()
+          Swal.fire({
+            title: 'Success',
+            text: 'User has been added!',
+            icon: 'success'
+          })
           reset(userSelected);
         })
         .catch(error => console.log(error.response?.data));
