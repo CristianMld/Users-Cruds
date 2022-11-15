@@ -85,8 +85,12 @@ const UsersForm = ({ getUsers, userSelected, deselectUser, handleVisibility }) =
         type="date" id="birthday" required/>
       </div>
       <button>Upload</button>
-      <button type="button" onClick={deselectUser} 
-      className="cancel-btn">Cancel</button>
+      {
+       userSelected && (
+        <button type="button" onClick={deselectUser} 
+        className="cancel-btn">Cancel</button>
+        )
+      }
     </form>
   );
 };

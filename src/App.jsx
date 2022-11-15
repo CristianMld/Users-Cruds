@@ -44,7 +44,6 @@ function App() {
 
   const deselectUser = () => { 
     setUserSelected(null);
-    handleVisibility();
   }
 
   const handleVisibility = () => setIsVisible(!isVisible);
