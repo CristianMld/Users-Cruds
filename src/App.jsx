@@ -32,8 +32,9 @@ function App() {
           .then(() => getUsers())
           .catch(error => console.log(error.response?.data))
           Swal.fire('Deleted!', '', 'success')
+          deselectUser();
       }
-    });
+    })
   }
 
   const selectUser = (user) => {
@@ -41,7 +42,10 @@ function App() {
     setUserSelected(user);
   }
 
-  const deselectUser = () => setUserSelected(null);
+  const deselectUser = () => { 
+    setUserSelected(null);
+    handleVisibility();
+  }
 
   const handleVisibility = () => setIsVisible(!isVisible);
   // console.log(usersList);
